@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens */
+:root{
+  --primary: #0ea5e9;
+  --accent1: #6366f1;
+  --accent2: #06b6d4;
+  --danger: #ef4444;
+  --success: #10b981;
+  --neutral-900: #111827;
+  --neutral-700: #374151;
+  --card-bg: #ffffff;
+}
+
+/* Small utility for card shadow */
+.card {
+  box-shadow: 0 6px 20px rgba(2,6,23,0.08);
+  border-radius: 12px;
+  background: var(--card-bg);
+}
