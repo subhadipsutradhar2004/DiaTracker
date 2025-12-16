@@ -50,12 +50,13 @@ export default function Dashboard(){
     setActivityText('Analyzing patient with Gemini…');
 
     try {
-      const res = await fetch('http://localhost:3000/api/recommend', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-
+    const res = await fetch('/api/recommend', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(form),
+});
       const data = await res.json();
       if (data.text) {
         setActivityText(data.text);
